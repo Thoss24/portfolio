@@ -7,6 +7,8 @@ import { DiJqueryLogo } from "react-icons/di";
 import { FaGitSquare } from "react-icons/fa";
 import { SiTailwindcss } from "react-icons/si";
 import { IconContext } from "react-icons";
+import { FaLaravel } from "react-icons/fa";
+import { SiLivewire } from "react-icons/si";
 import { motion } from "framer-motion";
 
 const Skills: React.FC<{}> = (props) => {
@@ -16,8 +18,8 @@ const Skills: React.FC<{}> = (props) => {
     <h2 className="text-xl text-white">My <strong className="text-xl text-cyan-500">skills</strong></h2>
     <motion.section
     transition={{delay: 0.1}}
-    initial={{scale: 0.7}}
-    whileInView={{scale: 1}}
+    initial={false}
+    whileInView={{scale: [0.7, 1]}}
     id="skills">
       <div className="flex flex-row justify-around w-full p-4">
       <IconContext.Provider
@@ -108,6 +110,28 @@ const Skills: React.FC<{}> = (props) => {
       >
         <div>
           <FaGitSquare />
+        </div>
+      </IconContext.Provider>
+      <IconContext.Provider
+        value={{
+          color: "#F05340",
+          className: "global-class-name",
+          size: "6em",
+        }}
+      >
+        <div>
+          <FaLaravel />
+        </div>
+      </IconContext.Provider>
+      <IconContext.Provider
+        value={{
+          color: "#F43F5E",
+          className: "global-class-name",
+          size: "6em",
+        }}
+      >
+        <div>
+          <SiLivewire />
         </div>
       </IconContext.Provider>
       </div>
