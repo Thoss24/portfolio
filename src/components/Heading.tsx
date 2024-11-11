@@ -1,16 +1,24 @@
 import { CiMenuBurger } from "react-icons/ci";
 import { IconContext } from "react-icons";
-import { useScroll } from "framer-motion";
 
 const Heading: React.FC<{}> = (props) => {
 
-  const { scrollYProgress} = useScroll();
+  const scrollTo = (event: React.MouseEvent<HTMLLIElement>, id: string): void => {
+    const scrollToElement = document.getElementById(id);
+    
+    if (scrollToElement) {
+      window.scroll({
+        top: scrollToElement.offsetTop,
+        behavior: 'smooth'
+      })
+    }
+  }
 
   return (
     <>
     <ul className="text-white hidden sm:flex gap-6 p-6 content-center justify-center fixed bg-zinc-700 w-full">
       <li>About</li>
-      <li><a href='#skills'>Skills</a></li>
+      <li onClick={(e) => scrollTo(e, 'skills')}>Skills</li>
       <li>Projects</li>
       <li>Contact</li>
       <li>Resume</li>
