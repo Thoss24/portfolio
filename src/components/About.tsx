@@ -2,7 +2,8 @@ import Line from "./Line";
 
 const About: React.FC<{}> = () => {
   return (
-    <div className="text-white h-dvh flex flex-col pt-0 sm:pt-20">
+    
+    <div className="text-white h-dvh flex flex-col pt-0 sm:pt-20" id="about">
       <p>
         Hello, <strong className="text-cyan-500">I'm</strong>
       </p>

@@ -7,8 +7,9 @@ const Heading: React.FC<{}> = (props) => {
     const scrollToElement = document.getElementById(id);
     
     if (scrollToElement) {
+      console.log(scrollToElement)
       window.scroll({
-        top: scrollToElement.offsetTop,
+        top: scrollToElement.offsetTop - 80,
         behavior: 'smooth'
       })
     }
@@ -17,11 +18,11 @@ const Heading: React.FC<{}> = (props) => {
   return (
     <>
     <ul className="text-white hidden sm:flex gap-6 p-6 content-center justify-center fixed bg-zinc-700 w-full">
-      <li>About</li>
+      <li onClick={(e) => scrollTo(e, 'about')}>About</li>
       <li onClick={(e) => scrollTo(e, 'skills')}>Skills</li>
-      <li>Projects</li>
-      <li>Contact</li>
-      <li>Resume</li>
+      <li onClick={(e) => scrollTo(e, 'projects')}>Projects</li>
+      <li onClick={(e) => scrollTo(e, 'contact')}>Contact</li>
+      <li onClick={(e) => scrollTo(e, 'resume')}>Resume</li>
     </ul>
     <h2 className="flex sm:hidden gap-6 mb-6 p-6 content-center justify-end">
       <IconContext.Provider

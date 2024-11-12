@@ -10,18 +10,18 @@ import { IconContext } from "react-icons";
 import { FaLaravel } from "react-icons/fa";
 import { SiLivewire } from "react-icons/si";
 import { motion } from "framer-motion";
+import SectionHeader from "./SectionHeader";
 
 const Skills: React.FC<{}> = (props) => {
 
   return (
-    <>
-    <h2 className="text-xl text-white">My <strong className="text-xl text-cyan-500">skills</strong></h2>
+    <div id="skills">
+    <SectionHeader title={"Skills"} />
     <motion.section
     transition={{delay: 0.1}}
     initial={false}
-    whileInView={{scale: [0.7, 1]}}
-    id="skills">
-      <div className="flex flex-row justify-around w-full p-4">
+    whileInView={{scale: [0.7, 1]}}>
+      <div className="flex flex-row justify-around w-full mb-2">
       <IconContext.Provider
         value={{
           color: "#e34c26",
@@ -67,7 +67,7 @@ const Skills: React.FC<{}> = (props) => {
         </div>
       </IconContext.Provider>
       </div>
-      <div className="flex flex-row justify-around w-full p-4">
+      <div className="flex flex-row justify-around w-full">
       <IconContext.Provider
         value={{
           color: "#8993be",
@@ -136,7 +136,7 @@ const Skills: React.FC<{}> = (props) => {
       </IconContext.Provider>
       </div>
     </motion.section>
-    </>
+    </div>
   );
 };
 
