@@ -1,4 +1,5 @@
 import Line from "./Line";
+import Skills from "./Skills";
 
 const About: React.FC<{}> = () => {
   return (
@@ -25,6 +26,7 @@ const About: React.FC<{}> = () => {
         This includes processing XML, iCals and JSON feeds with PHP to update and insert data into a relational database, fixing various bugs related to backend functionality, contributing to developing a new CRM with Laravel and using Git to work alongside other developers.
       </h3>
       </div>
+      <Skills />
       <Line />
     </div>
   );
