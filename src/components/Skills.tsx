@@ -3,55 +3,29 @@ import SectionHeader from "./SectionHeader";
 const Skills: React.FC<{}> = (props) => {
   return (
     <div className="mt-4" id="skills">
-      <p className="mb-2">
-        Technologies I love to <strong className="text-cyan-500">use!</strong>
-      </p>
-      <div className="flex flex-row gap-2 justify-start">
-        <div className="bg-gray-800 text-white rounded-lg p-2 shadow-lg content-center">
-          <p className="text-center">HTML</p>
+    <p className="mb-4 text-lg">
+      Technologies I love to <strong className="text-cyan-500">use!</strong>
+    </p>
+    <div className="flex flex-wrap gap-4 justify-center">
+      {[
+        "HTML",
+        "CSS",
+        "Tailwind CSS",
+        "JavaScript",
+        "PHP",
+        "React",
+        "JQuery",
+        "Git",
+        "Laravel",
+        "Livewire",
+        "MySQL"
+      ].map((skill) => (
+        <div key={skill} className="bg-gray-800 text-white rounded-lg p-4 shadow-lg flex items-center justify-center w-24 sm:w-32">
+          <p className="text-center text-sm sm:text-base">{skill}</p>
         </div>
-
-        <div className="bg-gray-800 text-white rounded-lg p-2 shadow-lg content-center">
-          <p className="text-center">CSS</p>
-        </div>
-
-        <div className="bg-gray-800 text-white rounded-lg p-2 shadow-lg content-center">
-          <p className="text-center">Tailwind CSS</p>
-        </div>
-
-        <div className="bg-gray-800 text-white rounded-lg p-2 shadow-lg content-center">
-          <p className="text-center">JavaScript</p>
-        </div>
-
-        <div className="bg-gray-800 text-white rounded-lg p-2 shadow-lg content-center">
-          <p className="text-center">PHP</p>
-        </div>
-
-        <div className="bg-gray-800 text-white rounded-lg p-2 shadow-lg content-center">
-          <p className="text-center">React</p>
-        </div>
-
-        <div className="bg-gray-800 text-white rounded-lg p-2 shadow-lg content-center">
-          <p className="text-center">JQuery</p>
-        </div>
-
-        <div className="bg-gray-800 text-white rounded-lg p-2 shadow-lg content-center">
-          <p className="text-center">Git</p>
-        </div>
-
-        <div className="bg-gray-800 text-white rounded-lg p-2 shadow-lg content-center">
-          <p className="text-center">Laravel</p>
-        </div>
-
-        <div className="bg-gray-800 text-white rounded-lg p-2 shadow-lg content-center">
-          <p className="text-center">Livewire</p>
-        </div>
-
-        <div className="bg-gray-800 text-white rounded-lg p-2 shadow-lg content-center">
-          <p className="text-center">MySQL</p>
-        </div>
-      </div>
+      ))}
     </div>
+  </div>
   );
 };
 

@@ -6,7 +6,7 @@ import Contact from "./components/Contact";
 function App() {
 
   return (
-    <div className="bg-zinc-700 pl-14 pr-14 pb-10">
+    <div className="bg-zinc-700 pl-14 pr-14 pb-10 flex flex-col">
       <Heading />
       <About />
       <Projects />
