@@ -32,8 +32,8 @@ const Heading: React.FC<{}> = (props) => {
   };
 
   const dropdownModal = (
-    <div className="relative inline-block text-left">
-    <div>
+    <div className="relative text-left">
+    <div className="absolute" >
       <button
         onClick={toggleModal}
         className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-cyan-500 text-white hover:bg-cyan-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
@@ -114,7 +114,7 @@ const Heading: React.FC<{}> = (props) => {
           ></div>
         </motion.div>
       </div>
-      <h2 className="flex sm:hidden gap-6 mb-6 p-6 content-center justify-end">
+      <h2 className="flex relative sm:hidden gap-6 mb-6 p-6 content-center justify-end">
         <IconContext.Provider
           value={{
             color: "white",
@@ -122,7 +122,7 @@ const Heading: React.FC<{}> = (props) => {
             size: "1.5em",
           }}
         >
-          <div onClick={toggleModal}>
+          <div className="absolute" onClick={toggleModal}>
             {!isOpen && <CiMenuBurger />}
           </div>
           {isOpen && dropdownModal}
